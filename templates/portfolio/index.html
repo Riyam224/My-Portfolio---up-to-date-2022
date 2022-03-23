@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+
+{% block content  %}
+
+
+<div class="front-vid">
+    <!-- <h1>Welcome!</h1> -->
+    <video autoplay muted loop style="width: 100%; height: 100%;">
+        <source src="{% static 'vids/video.mp4' %}" type="video/mp4">
+        </source>
+    </video>
+</div>
+
+
+<!-- Menu Button -->
+<div class="button">
+
+    <a href="#" id="btn-menu" class="btn-open"></a>
+
+</div>
+
+<!-- Overlay -->
+<div class="overlay">
+
+    <div class="nav-container">
+
+        <div class="nav-col">
+
+            <h2>About</h2>
+            <ul>
+                <li> <a href="{% url 'portfolio:about' %}">Resume</a> </li>
+                <li> <a href="#">Offices</a> </li>
+                <li> <a href="#">CEO</a> </li>
+
+            </ul>
+        </div>
+
+        <div class="nav-col">
+
+            <h2>Services</h2>
+            <ul>
+                <li> <a href="{% url 'portfolio:services' %}">Design</a> </li>
+                <li> <a href="#">Development</a> </li>
+                <li> <a href="#">Support</a> </li>
+
+            </ul>
+        </div>
+
+        <div class="nav-col">
+
+            <h2>Work</h2>
+            <ul>
+                <li> <a href="{% url 'portfolio:work' %}">HTML5</a> </li>
+                <li> <a href="#">CSS3</a> </li>
+                <li> <a href="#">JavaScript</a> </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+{% endblock content  %}
